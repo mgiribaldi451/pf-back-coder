@@ -9,7 +9,7 @@ require("../../../utils/bcrypt");
 
 const router = express.Router();
 
-ProductDaoFactory.getDao();
+//ProductDaoFactory.getDao();
 
 const storage = multer.diskStorage({
   destination: function(req, file, cb) {

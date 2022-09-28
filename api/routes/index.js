@@ -14,7 +14,7 @@ const logger = require("../../utils/logger");
 const axios = require("axios");
 const {Server: HttpServer} = require('http')
 const {Server: IOServer} = require('socket.io')
-
+const ProductDaoFactory = require("../factoryConnect/factoryConnect");
 
 const app = express();
 let port = 8080;
@@ -140,6 +140,7 @@ app.get("/logout", (req, res) => {
     }
   });
 });
+ProductDaoFactory.getDao();
 //app.use("/static", express.static('./static/'));
 app.use("/user", users,express.static('./public/'));
 app.use("/prods", productos);

@@ -1,7 +1,7 @@
 const dotenv = require("dotenv");
 
-dotenv.config({ path: "../.env" });
-
+//dotenv.config({ path: "../.env" });
+dotenv.config()
 const variableEnv = {
   port: process.env.PORT,
   node_env: process.env.NODE_ENV,
